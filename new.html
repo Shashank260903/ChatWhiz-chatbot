@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChatWiz - Your Virtual Assistant</title>
+
+  <!-- Add Custom Styles -->
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(45deg, #09b540, #4eab65, #5e806b,#c5ee9c,#cee6b4);
+      background-size: 400% 400%;
+      animation: gradientAnimation 5s ease infinite;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      padding-top: 50px;
+      font-size: 36px;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    }
+
+    .chat-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .chatbox-wrapper {
+      background: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.3);
+      max-width: 700px; /* Increased maximum width */
+      width: 100%;
+      transition: all 0.5s ease-in-out;
+    }
+
+    .chatbox-wrapper:hover {
+      transform: scale(1.05);
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px; /* Height remains unchanged */
+      border-radius: 15px;
+      border: none;
+    }
+
+    /* Background Animation */
+    @keyframes gradientAnimation {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .chatbot-title {
+      font-size: 40px;
+      text-align: center;
+      color: #333;
+      margin-bottom: 30px;
+      font-weight: bold;
+      text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 768px) {
+      .chatbox-wrapper {
+        max-width: 100%; /* Ensures full width on mobile */
+        padding: 10px; /* Adjust padding for smaller screens */
+      }
+
+      .chatbot-title {
+        font-size: 28px; /* Smaller title on mobile */
+        margin-bottom: 20px;
+      }
+
+      iframe {
+        height: 350px; /* Slightly reduce height on mobile */
+      }
+    }
+
+    /* Small screen adjustments */
+    @media (max-width: 480px) {
+      .chatbot-title {
+        font-size: 24px; /* Even smaller title on very small screens */
+      }
+
+      iframe {
+        height: 300px; /* Further reduce height on smaller screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Container for the chatbot -->
+  <div class="chat-container">
+    <div class="chatbot-title">Welcome to Chat-Wiz</div>
+    <div class="chatbox-wrapper">
+      <iframe
+        src="https://www.chatbase.co/chatbot-iframe/teILbE9NKJHyN2Etz5wdc"
+        style="height: 100%; min-height: 450px; width:100%; max-width:700px;"
+        frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- Script to initialize the chatbot -->
+  <script>
+    window.embeddedChatbotConfig = {
+      chatbotId: "teILbE9NKJHyN2Etz5wdc",
+      domain: "www.chatbase.co"
+    };
+  </script>
+
+  <script src="https://www.chatbase.co/embed.min.js"
+    chatbotId="teILbE9NKJHyN2Etz5wdc"
+    domain="www.chatbase.co"
+    defer>
+  </script>
+
+</body>
+</html>
